@@ -16,7 +16,8 @@ class Incident(models.Model):
     incident_type = models.CharField(max_length=100, null=False, blank=False, verbose_name="tipo de incidente")
     description = models.TextField(null=False, blank=False, verbose_name="descripción")
     date = models.CharField(max_length=50, null=False, blank=False, verbose_name="fecha del incidente")
-    image = models.CharField(max_length=255, null=True, blank=True, verbose_name="imagen")
+    image_url = models.URLField(max_length=255, null=True, blank=True, verbose_name="URL de la Imagen")
+    image_public_id = models.CharField(max_length=100, null=True, blank=True, verbose_name="Cloudinary Public ID")
     comment = models.TextField(null=True, blank=True, verbose_name="comentario de solución")
     
     status = models.CharField(

@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
+import cloudinary
+
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'user_control',
     'incident',
+    'cloudinary',
 ]
 
 REST_FRAMEWORK = {
